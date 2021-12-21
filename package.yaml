@@ -1,23 +1,17 @@
 name:                DerivativeCalc
-version:             0.1.0.0
-github:              "githubuser/DerivativeCalc"
-license:             BSD3
-author:              "Author name here"
-maintainer:          "example@example.com"
-copyright:           "2021 Author name here"
+version:             0.1.0.1
+github:              "youcefs21/DerivativeCalc"
+license:             GNU AGPLv3
+author:              "Youcef Boumar"
+maintainer:          "youcefs2121@gmail.com"
+copyright:           "2021 Youcef Boumar"
 
 extra-source-files:
 - README.md
 - ChangeLog.md
 
-# Metadata used when publishing your package
-# synopsis:            Short description of your package
-# category:            Web
 
-# To avoid duplicated efforts in documentation and dealing with the
-# complications of embedding Haddock markup inside cabal files, it is
-# common to point users to the README.md file.
-description:         Please see the README on GitHub at <https://github.com/githubuser/DerivativeCalc#readme>
+description:         Please see the README on GitHub at <https://github.com/youcefs21/DerivativeCalc#readme>
 
 dependencies:
 - base >= 4.7 && < 5
