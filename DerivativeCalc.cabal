@@ -5,14 +5,14 @@ cabal-version: 1.12
 -- see: https://github.com/sol/hpack
 
 name:           DerivativeCalc
-version:        0.1.0.1
+version:        0.1.0.2
 description:    Please see the README on GitHub at <https://github.com/youcefs21/DerivativeCalc#readme>
 homepage:       https://github.com/youcefs21/DerivativeCalc#readme
 bug-reports:    https://github.com/youcefs21/DerivativeCalc/issues
 author:         Youcef Boumar
 maintainer:     youcefs2121@gmail.com
 copyright:      2021 Youcef Boumar
-license:        GNU AGPLv3
+license:        AGPL-3
 license-file:   LICENSE
 build-type:     Simple
 extra-source-files:
@@ -25,6 +25,7 @@ source-repository head
 
 library
   exposed-modules:
+      Derivative
       Expression
   other-modules:
       Paths_DerivativeCalc

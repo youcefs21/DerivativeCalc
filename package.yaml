@@ -1,7 +1,7 @@
 name:                DerivativeCalc
-version:             0.1.0.1
+version:             0.1.0.2
 github:              "youcefs21/DerivativeCalc"
-license:             GNU AGPLv3
+license:             AGPL-3
 author:              "Youcef Boumar"
 maintainer:          "youcefs2121@gmail.com"
 copyright:           "2021 Youcef Boumar"
