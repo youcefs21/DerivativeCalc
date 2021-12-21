@@ -4,7 +4,7 @@ module Expression where
 
 {-
   ======================================================================
-  An Abstract Syntax Tree for encoding mathematical expressions
+  An Abstract Syntax Tree for representing mathematical expressions.
 
   A mathematical expression is either
   - a variable, 
@@ -23,7 +23,7 @@ data MathExpr a =
 data BinOp = Add | Mult 
   deriving (Show,Eq,Read)
 
-data UnaryOp = Cos | Sin | Abs | Signum | Power Int 
+data UnaryOp = Cos | Sin | Abs | Power Int 
   deriving (Show,Eq,Read)
 
 
@@ -38,7 +38,7 @@ instance Num a => Num (MathExpr a) where
   negate x      = Func2 Mult (Coef (-1)) x
   abs x         = Func1 Abs x
   fromInteger i = Coef (fromInteger i)
-  signum x      = Func1 Signum x
+  signum x      = error "will not be implemented"
 
 {-
   ======================================================================
