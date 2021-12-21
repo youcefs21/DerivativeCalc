@@ -16,3 +16,6 @@
     - Created a new function: `diff :: MathExpr -> MathExpr` which returns the derivative of a given expression
 - Updated `Main.hs` to include the new module as an import
 - Removed Signum from `MathExpr` because it doesn't really make any sense in the context of differentiation
+
+### Version 0.2.0.1:
+- Updated `README.md` to include the new features

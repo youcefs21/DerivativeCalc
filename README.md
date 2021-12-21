@@ -3,11 +3,14 @@
 A Haskell project that symbolically differentiates a given equation.
 
 ## Current Features:
-- can represent any single variable equation using an abstract syntax tree, as long as it only consists of the following operators:
-    - addition
-    - multiplication
-    - exponentiation
-    - sin
-    - cos
-    - absolute value
-- the syntax tree is an instance of the Num, Floating, and Fractional classes
+- An algebraic data type `MathExpr`:
+    - it can represent any single variable mathematical expression, as long as it only consists of the following operators:
+        - addition
+        - multiplication
+        - exponentiation
+        - sin
+        - cos
+        - absolute value
+    - `MathExpr` is an instance of the Num, Floating, and Fractional classes
+- A function `diff` that can differentiate any expression that can be represented with `MathExpr`
+
