@@ -13,4 +13,4 @@ A Haskell project that symbolically differentiates a given equation.
         - absolute value
     - `MathExpr` is an instance of the Num, Floating, and Fractional classes
 - A function `diff` that can differentiate any expression that can be represented with `MathExpr`
-
+- A function `simplify` that can perform basic simplifications on expressions with redundant multiplication by 1 or 0, and redundant addition of 0
