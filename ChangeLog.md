@@ -41,6 +41,13 @@ I had a 24-hour exam, so no progress was made.
 - Updated `Derivative.hs`'s `diff` function to use `simplify` before returning the derivative
 - reformated version number from `x.y.z.w` to `x.y.z`
 
+## Day 5:
+
 ### Version 0.4.0:
 - Created a new function: `prettyPrint :: MathExpr -> String` which converts an expression to a string with conventional notation
 - Updated README.md to include the new features
+
+## Day 6:
+### Version 0.4.1:
+- renamed `Pretty.hs` to `Simplify.hs`
+- `prettyPrint` has been removed, the implementation is now used to make `MathExpr` an instance of `Show` (in `Expression.hs`)

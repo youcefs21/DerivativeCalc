@@ -1,7 +1,7 @@
 module Derivative where
 
 import Expression
-import Pretty
+import Simplify
 
 {-
   ======================================================================

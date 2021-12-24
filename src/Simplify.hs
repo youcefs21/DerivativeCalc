@@ -1,4 +1,4 @@
-module Pretty where
+module Simplify where
 
 import Expression
 
@@ -24,18 +24,18 @@ simplify (Func2 Mult ex1 ex2)
   | ex2 == Coef 1 = simplify ex1
   | isOneZr = simplify $ Func2 Mult ex1S ex2S
   | otherwise = Func2 Mult ex1S ex2S
-    where 
+    where
       ex1S = simplify ex1
       ex2S = simplify ex2
       isOneZr = ex1S == 1 || ex1S == 0 || ex2S == 1 || ex2S == 0
 -- simplify addition by 0
   -- Example: (x + 0) + (0 + x) = x + x
-simplify (Func2 Add ex1 ex2) 
+simplify (Func2 Add ex1 ex2)
   | ex1 == Coef 0 = simplify ex2
   | ex2 == Coef 0 = simplify ex1
   | isZr = simplify $ Func2 Add ex1S ex2S
   | otherwise = Func2 Add ex1S ex2S
-    where 
+    where
       ex1S = simplify ex1
       ex2S = simplify ex2
       isZr = ex1S == 0 || ex2S == 0
@@ -43,21 +43,4 @@ simplify (Func2 Add ex1 ex2)
 simplify ex = ex
 
 
-{-
-  ======================================================================
-  pretty prints the equation
-  ======================================================================
--}
-prettyPrint :: (Show a) => MathExpr a -> String
-prettyPrint X             = "X"
-prettyPrint (Coef a)      = show a
-prettyPrint (Func1 op ex) = 
-  case op of
-    Cos     -> "cos(" ++ prettyPrint ex ++ ")"
-    Sin     -> "sin(" ++ prettyPrint ex ++ ")"
-    Abs     -> "|" ++ prettyPrint ex ++ "|"
-    Power n -> "(" ++ prettyPrint ex ++ ")^(" ++ show n ++ ")"
-prettyPrint (Func2 op ex1 ex2) = 
-  case op of
-    Add     -> "(" ++ prettyPrint ex1 ++ ") + (" ++ prettyPrint ex2 ++ ")"
-    Mult    -> "(" ++ prettyPrint ex1 ++ ") * (" ++ prettyPrint ex2 ++ ")"
+
