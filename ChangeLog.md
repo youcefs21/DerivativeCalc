@@ -51,3 +51,11 @@ I had a 24-hour exam, so no progress was made.
 ### Version 0.4.1:
 - renamed `Pretty.hs` to `Simplify.hs`
 - `prettyPrint` has been removed, the implementation is now used to make `MathExpr` an instance of `Show` (in `Expression.hs`)
+
+### Version 0.4.2:
+- Added the following simplifications to `simplify`
+    - `exp^n * exp^m = exp^(n+m)` (expressions with no exponentiation are assumed to have an exponent of 1)
+    - `exp^0 = 1`
+    - `exp^1 = exp`
+- Updated `README.md` to list the simplifications that `simplify` performs
+- Cleaned up `simplify`'s implementation
