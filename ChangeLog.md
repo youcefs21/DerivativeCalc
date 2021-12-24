@@ -40,3 +40,7 @@ I had a 24-hour exam, so no progress was made.
 - Updated `Main.hs` to include the new module as an import
 - Updated `Derivative.hs`'s `diff` function to use `simplify` before returning the derivative
 - reformated version number from `x.y.z.w` to `x.y.z`
+
+### Version 0.4.0:
+- Created a new function: `prettyPrint :: MathExpr -> String` which converts an expression to a string with conventional notation
+- Updated README.md to include the new features

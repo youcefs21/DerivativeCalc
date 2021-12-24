@@ -42,3 +42,22 @@ simplify (Func2 Add ex1 ex2)
 -- everything else is left as is
 simplify ex = ex
 
+
+{-
+  ======================================================================
+  pretty prints the equation
+  ======================================================================
+-}
+prettyPrint :: (Show a) => MathExpr a -> String
+prettyPrint X             = "X"
+prettyPrint (Coef a)      = show a
+prettyPrint (Func1 op ex) = 
+  case op of
+    Cos     -> "cos(" ++ prettyPrint ex ++ ")"
+    Sin     -> "sin(" ++ prettyPrint ex ++ ")"
+    Abs     -> "|" ++ prettyPrint ex ++ "|"
+    Power n -> "(" ++ prettyPrint ex ++ ")^(" ++ show n ++ ")"
+prettyPrint (Func2 op ex1 ex2) = 
+  case op of
+    Add     -> "(" ++ prettyPrint ex1 ++ ") + (" ++ prettyPrint ex2 ++ ")"
+    Mult    -> "(" ++ prettyPrint ex1 ++ ") * (" ++ prettyPrint ex2 ++ ")"
