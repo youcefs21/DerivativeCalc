@@ -18,13 +18,13 @@ data MathExpr a =
   | Coef a
   | Func1 UnaryOp (MathExpr a)
   | Func2 BinOp (MathExpr a) (MathExpr a)
-  deriving (Eq)
+  deriving (Show,Eq,Read)
 
 data BinOp = Add | Mult 
-  deriving (Eq)
+  deriving (Show,Eq,Read)
 
 data UnaryOp = Cos | Sin | Abs | Power Int 
-  deriving (Eq)
+  deriving (Show,Eq,Read)
 
 
 {-
@@ -78,20 +78,19 @@ instance Floating a => Floating (MathExpr a) where
 
 {-
   ======================================================================
-  implements the Show type class for MathExpr
+  pretty prints the equation
   ======================================================================
 -}
-instance Show a => Show (MathExpr a) where
-  show X             = "X"
-  show (Coef a)      = show a
-  show (Func1 op ex) =
-    case op of
-      Cos     -> "cos(" ++ show ex ++ ")"
-      Sin     -> "sin(" ++ show ex ++ ")"
-      Abs     -> "|" ++ show ex ++ "|"
-      Power n -> "(" ++ show ex ++ ")^(" ++ show n ++ ")"
-  show (Func2 op ex1 ex2) =
-    case op of
-      Add     -> "(" ++ show ex1 ++ ") + (" ++ show ex2 ++ ")"
-      Mult    -> "(" ++ show ex1 ++ ") * (" ++ show ex2 ++ ")"
-
+prettyPrint :: (Show a) => MathExpr a -> String
+prettyPrint X             = "X"
+prettyPrint (Coef a)      = show a
+prettyPrint (Func1 op ex) = 
+  case op of
+    Cos     -> "cos(" ++ prettyPrint ex ++ ")"
+    Sin     -> "sin(" ++ prettyPrint ex ++ ")"
+    Abs     -> "|" ++ prettyPrint ex ++ "|"
+    Power n -> "(" ++ prettyPrint ex ++ ")^" ++ show n
+prettyPrint (Func2 op ex1 ex2) = 
+  case op of
+    Add     -> "(" ++ prettyPrint ex1 ++ ") + (" ++ prettyPrint ex2 ++ ")"
+    Mult    -> "(" ++ prettyPrint ex1 ++ ") * (" ++ prettyPrint ex2 ++ ")" 

@@ -59,3 +59,7 @@ I had a 24-hour exam, so no progress was made.
     - `exp^1 = exp`
 - Updated `README.md` to list the simplifications that `simplify` performs
 - Cleaned up `simplify`'s implementation
+
+### Version 0.4.3:
+- undid much of 0.4.1 because I realized that it's a bad idea to manually implement `Show` and `Read` for `MathExpr` instead of using the `deriving` keyword
+- the function `prettyPrint` is now in `Expression.hs`

@@ -11,7 +11,7 @@ A Haskell project that symbolically differentiates a given equation.
         - sin
         - cos
         - absolute value
-    - `MathExpr` is a custom instance of the `Num`, `Floating`, `Fractional`, `Show` classes
+    - `MathExpr` is a custom instance of the `Num`, `Floating`, and `Fractional` type classes
 - A function `diff` that can differentiate any expression that can be represented with `MathExpr`
 - A function `simplify` that can perform basic simplifications on expressions to reduce redundancy:
     - `exp * 0 = 0` and `0 * exp = 0`
@@ -20,3 +20,4 @@ A Haskell project that symbolically differentiates a given equation.
     - `exp^n * exp^m = exp^(n+m)` (expressions with no exponentiation are assumed to have an exponent of 1)
     - `exp^0 = 1`
     - `exp^1 = exp`
+- A function `prettyPrint` that can convert an expression to a string with conventional notation
