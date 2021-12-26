@@ -2,6 +2,16 @@
 
 A Haskell project that symbolically differentiates a given equation.
 
+
+## Basic Usage:
+### Prerequisites:
+1. Install [the Haskell tool stack](https://docs.haskellstack.org/en/stable/README/#how-to-install)
+
+### Running the project:
+1. cd into the project directory
+2. `stack clean` then `stack build` (only needs to be done once)
+3. `stack run`
+
 ## Current Features:
 - An algebraic data type `MathExpr`:
     - it can represent any single variable mathematical expression, as long as it only consists of the following operators:
@@ -21,3 +31,4 @@ A Haskell project that symbolically differentiates a given equation.
     - `exp^0 = 1`
     - `exp^1 = exp`
 - A function `prettyPrint` that can convert an expression to a string with conventional notation
+- A function `parseMathExpr` that can parse a string into an expression

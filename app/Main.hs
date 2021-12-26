@@ -5,4 +5,9 @@ import Derivative
 import Simplify
 
 main :: IO ()
-main = putStrLn "Nothing to see here, yet"
+main = do
+  putStrLn "Enter an expression:"
+  input <- getLine
+  let expr = parseMathExpr input
+  putStrLn $ "Expression: " ++ prettyPrint (simplify expr)
+  putStrLn $ "Derivative: " ++ prettyPrint (diff expr)

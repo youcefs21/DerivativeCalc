@@ -63,3 +63,10 @@ I had a 24-hour exam, so no progress was made.
 ### Version 0.4.3:
 - undid much of 0.4.1 because I realized that it's a bad idea to manually implement `Show` and `Read` for `MathExpr` instead of using the `deriving` keyword
 - the function `prettyPrint` is now in `Expression.hs`
+
+## Day 7:
+
+### Version 1.0.0:
+- Created a new function `parseMathExpr` in `Expressions.hs` which parses a string into an expression
+- Running `stack run` will now prompt for an expression to differentiate
+- Updated `README.md` to include usage instructions and new features
