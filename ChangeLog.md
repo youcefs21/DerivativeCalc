@@ -1,17 +1,14 @@
 # Changelog for DerivativeCalc
 
-## Initial implementation
-
-## Day 1:
+## Initial implementation:
 
 ### Version 0.1.0
 - Initial release
 - Implemented `MathExpr`
 
-## Day 2:
-
 ### Version 0.1.1:
 - Updated package.yaml with up to date project information
+
 ### Version 0.1.2:
 - Fixed bad license formatting in package.yaml that caused project to not compile
 
@@ -24,14 +21,7 @@
 ### Version 0.2.1:
 - Updated `README.md` to include the new features
 
-## Day 3:
-I had a 24-hour exam, so no progress was made.
-
-
-## Day 4:
-
 ### Version 0.2.2:
-
 - Updated `ChangeLog.md` to include day count
 
 ### Version 0.3.0:
@@ -41,13 +31,10 @@ I had a 24-hour exam, so no progress was made.
 - Updated `Derivative.hs`'s `diff` function to use `simplify` before returning the derivative
 - reformated version number from `x.y.z.w` to `x.y.z`
 
-## Day 5:
-
 ### Version 0.4.0:
 - Created a new function: `prettyPrint :: MathExpr -> String` which converts an expression to a string with conventional notation
 - Updated README.md to include the new features
 
-## Day 6:
 ### Version 0.4.1:
 - renamed `Pretty.hs` to `Simplify.hs`
 - `prettyPrint` has been removed, the implementation is now used to make `MathExpr` an instance of `Show` (in `Expression.hs`)
@@ -63,8 +50,6 @@ I had a 24-hour exam, so no progress was made.
 ### Version 0.4.3:
 - undid much of 0.4.1 because I realized that it's a bad idea to manually implement `Show` and `Read` for `MathExpr` instead of using the `deriving` keyword
 - the function `prettyPrint` is now in `Expression.hs`
-
-## Day 7:
 
 ### Version 1.0.0:
 - Created a new function `parseMathExpr` in `Expressions.hs` which parses a string into an expression
