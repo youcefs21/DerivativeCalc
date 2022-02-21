@@ -55,3 +55,8 @@
 - Created a new function `parseMathExpr` in `Expressions.hs` which parses a string into an expression
 - Running `stack run` will now prompt for an expression to differentiate
 - Updated `README.md` to include usage instructions and new features
+
+### Version 1.1.0:
+- implemented a basic unit test in `Spec.hs`
+    - implemented a function `eval` to help with unit testing
+    - implemented the almost equal operator to avoid floating point error
